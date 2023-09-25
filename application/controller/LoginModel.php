@@ -11,6 +11,7 @@ class LoginModel extends DbConfig
         if($result->rowCount() > 0){
             return true;
         } 
+        
         return false;
     }
 }
