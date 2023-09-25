@@ -8,8 +8,7 @@ abstract class DbConfig {
     protected $username = 'root';
     protected $password = '';
 
-    private function openConn() {
-        
+    private function openConn() {        
 
         if (!$this->con) {
 
@@ -37,9 +36,7 @@ abstract class DbConfig {
         if ($this->con) {
          
             $result = $this->con->prepare($sql);            
-            $result->execute($params);
-            // $result->bindParam(':username', $username);  
-            
+            $result->execute($params);            
 
             if (!$persist) {
                $this->closeConn();
@@ -81,10 +78,6 @@ abstract class DbConfig {
         }
 
         return $result;
-    }
-    
-    protected function getRows() {
-        return  $this->con->rowCount();
     }
 
     protected function getAffectedRows() {
