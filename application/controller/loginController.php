@@ -1,5 +1,5 @@
 <?php
-require_once '../controller/LoginModel.php';
+require_once '../model/LoginModel.php';
 $model = new LoginModel;
 $login = $_REQUEST['login'] ?? '';
 $senha = $_REQUEST['senha'] ?? '';
