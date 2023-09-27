@@ -6,7 +6,7 @@ class LoginModel extends DbConfig
     public function login($login, $senha)
     {
         $params = [$login, $senha];
-        $sql ="SELECT * FROM login WHERE user = ? AND senha = ? ";
+        $sql ="SELECT * FROM login WHERE user = ? AND password = ? ";
         $result = $this->execQuery($sql, $params);
         if($result->rowCount() > 0){
             return true;

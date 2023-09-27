@@ -4,7 +4,7 @@ abstract class DbConfig {
 
     protected $con;
     protected $host = 'localhost';
-    protected $dbname = 'banco';
+    protected $dbname = 'adm_condominio';
     protected $username = 'root';
     protected $password = '';
 

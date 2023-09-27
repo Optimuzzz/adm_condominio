@@ -6,7 +6,7 @@ $senha = $_REQUEST['senha'] ?? '';
 
 $rs = $model->login($login, $senha);
 if ($rs) {
-    echo 'logado';
+    echo json_encode(["status" => 200], true);
 } else {
-    echo 'nao logado';
+    echo json_encode(["status" => 401], true);
 }
