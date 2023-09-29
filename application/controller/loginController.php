@@ -6,7 +6,7 @@ $senha = $_REQUEST['senha'] ?? '';
 
 $rs = $model->login($login, $senha);
 if ($rs) {
-    echo json_encode(["status" => 200], true);
+    echo json_encode(["status" => 200], JSON_INVALID_UTF8_IGNORE);
 } else {
-    echo json_encode(["status" => 401], true);
+    echo json_encode(["status" => 401], JSON_INVALID_UTF8_IGNORE);
 }

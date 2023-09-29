@@ -1,43 +1,41 @@
-const loginController = () => {
+const loginController = (() => {
 
     const init = () => {
         $('#year').text(moment().year());
         $('#btn_login').click(() => {
-            getForm();
+            getLogin();
         });
        
     }
-    const getForm = () => {
-      
+    const getLogin = async () => {
 
-        var formData = {
+        let params = {
             login: $("#login").val(),
             senha: $("#senha").val(),
         };
+        let url = "application/controller/loginController";
+        $('#btn_login').attr('disabled', true);
 
+        RequestController.request(url, params, 'POST').then((res) => {
+           
 
-        $.ajax({
-            type: "POST",
-            url: "application/controller/loginController.php",
-            data: formData,
-            dataType: "json",
-            encode: true,
-        }).done(function (data) {
-            if(data.status == 200){
-                window.location.replace("public/home.php");
+            if (res.status == 200) {
+                location.replace("public/home");
+                return;
             }
-            
-            
 
+            Notiflix.Notify.failure('Login e senha incorretos');
+
+            setTimeout(() => {
+                $('#btn_login').attr('disabled', false);
+            }, 2000);
+            LoaderController.hide();
         });
-
-       
     }
+    
 
     init();
 
-}
+})();
 
-
-
-loginController();
+$(document).ready(()=>{LoaderController.loader()})
