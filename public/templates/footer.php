@@ -4,8 +4,6 @@
 <script src="../js/requestController/requestController.js"></script>
 <script src="../js/loaderController/loaderController.js"></script>
 
-
-
 <?php
 $curPage = substr($_SERVER["REQUEST_URI"], strrpos($_SERVER["REQUEST_URI"], "/") + 1);
 switch ($curPage) {
