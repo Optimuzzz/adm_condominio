@@ -1,6 +1,6 @@
 <?php
-include_once 'templates/topo.html';
-include_once 'templates/menu.html';
+include_once 'templates/topo.php';
+include_once 'templates/menu.php';
 ?>
 
 <body cz-shortcut-listen="true">
@@ -21,7 +21,8 @@ include_once 'templates/menu.html';
 		</div>
 
 	</main>
-<?php include_once 'templates/footer.html'; ?>
+
+<?php include_once 'templates/footer.php'; ?>
 
 </body>
 
