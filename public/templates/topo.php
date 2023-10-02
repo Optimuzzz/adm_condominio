@@ -85,6 +85,9 @@
         .bd-mode-toggle .dropdown-menu .active .bi {
             display: block !important;
         }
+        .list-group-item {
+            cursor: pointer;
+        }
     </style>
 
 </head>
