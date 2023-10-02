@@ -29,7 +29,7 @@ abstract class DbConfig {
         }
     }
 
-    protected function execQuery($sql, $params, $persist = false) {
+    protected function execQuery($sql, $params = null, $persist = false) {
         $result = false;
         $this->openConn();
 

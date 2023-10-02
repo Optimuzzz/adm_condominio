@@ -13,7 +13,8 @@
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="../img/favicon.ico" type="image/x-icon" />
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/loader.css">
+    <link rel="stylesheet" href="../assets/css/notiflix-3.2.5.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
 
     <style>
         body {
@@ -78,7 +79,7 @@
 
 
         .bd-mode-toggle {
-            z-index: 1500;
+            z-index: 1;
         }
 
         .bd-mode-toggle .dropdown-menu .active .bi {
@@ -88,9 +89,7 @@
 
 </head>
 <div>
-    <div class="overlay d-none">
-        <div class="loader"></div>
-    </div>
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="moon-stars-fill" viewBox="0 0 16 16">
             <path

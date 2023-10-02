@@ -1,15 +1,19 @@
 const LoaderController = (() => {
-    const loader = ()=>{
-        $('.overlay').removeClass('d-none')
+   
+    const loader = ()=>{      
+        Notiflix.Loading.circle();
+            
         setTimeout(() => {
-            $('.overlay').addClass('d-none')
+            Notiflix.Loading.remove();
         }, 1500);
     }
     const show = ()=>{
-        $('.overlay').removeClass('d-none')
+        loader();
     }
     const hide = ()=>{       
-        $('.overlay').addClass('d-none');
+        setTimeout(() => {
+            Notiflix.Loading.remove();            
+        }, 300);
     }
     
     return {

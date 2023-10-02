@@ -2,6 +2,7 @@ const RequestController = (() => {
 
     let request = async (url, params, method = 'GET') => {
         LoaderController.show();
+        // Notiflix.Loading.pulse();
         let res;
         params = params ? params : undefined;
        
