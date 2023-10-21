@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="assets/js/color-modes.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/notiflix-3.2.5.min.css">
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Adm Condomínio</title>
+
+</head>
+
+<body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a class="nav__logo">Adm Condomínio</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a id="#home" class="nav__link active-link">
+                            <i class='bx bx-home-alt nav__icon'></i>
+                            <span class="nav__name">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a id="#lista_entregas" class="nav__link">
+                            <i class='bx bx-book-alt nav__icon'></i>
+                            <span class="nav__name">Fazer entrega</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a id="#receber_encomenda" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon'></i>
+                            <span class="nav__name">Receber objetos</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a id="#historico" class="nav__link">
+                            <i class='bx bx-briefcase-alt nav__icon'></i>
+                            <span class="nav__name">Histórico</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a id="#moradores" class="nav__link">
+                            <i class='bx bx-user nav__icon'></i>
+                            <span class="nav__name">Moradores</span>
+                        </a>
+                    </li>
+
+
+
+
+                </ul>
+            </div>
+
+            <img src="assets/img/user.png" alt="" class="nav__img">
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =============== HOME ===============-->
+        <section class="container section section__height" id="home">
+            <h2 class="section__title pt-2">Home</h2>
+            <div style="display: flex;  justify-content: center; align-items: center; height: calc(70vh);">
+                <img class="m b-4" src="assets/img/223.jpg" alt="">
+
+            </div>
+        </section>
+
+        <!--=============== #lista_entregas ===============-->
+        <section class="container section section__height" id="lista_entregas" style="display: none;">
+            <h2 class="section__title pt-2">Entregas a fazer</h2>
+            <div class=" rounded">
+                <div class="col-sm py-1 mx-auto">
+                    <ul class="list-group d-flex align-items-center" id="list_entregas">
+                        <!-- <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"> -->
+                </div>
+                </ul>
+            </div>
+            </div>
+        </section>
+
+        <!--=============== receber_encomenda ===============-->
+        <section class="container section section__height" id="receber_encomenda" style="display: none;">
+            <h2 class="section__title pt-2">Receber encomendas</h2>
+        </section>
+
+        <!--=============== moradores ===============-->
+        <section class="container section section__height" id="moradores" style="display: none;">
+            <h2 class="section__title pt-2">Moradores</h2>
+        </section>
+
+        <!--=============== historico ===============-->
+        <section class="container section section__height" id="historico" style="display: none;">
+            <h2 class="section__title pt-2">Histórico</h2>
+        </section>
+
+
+
+    </main>
+
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="src/requestController/requestController.js"></script>
+    <script src="src/loaderController/loaderController.js"></script>
+    <script src="src/entregas/EntregasController.js"></script>
+    <script src="src/entregas/EntregasTemplates.js"></script>
+    <script src="assets/js/notiflix-3.2.5.min.js"></script>
+</body>
+
+</html>

@@ -16,11 +16,10 @@ const loginController = (() => {
         let url = "application/controller/loginController";
         $('#btn_login').attr('disabled', true);
 
-        RequestController.request(url, params, 'POST').then((res) => {
-           
+        RequestController.request(url, params, 'POST').then((res) => {           
 
             if (res.status == 200) {
-                location.replace("public/home");
+                location.replace("home");
                 return;
             }
 

@@ -1,4 +1,4 @@
-const homeTemplates = (function () {
+const EntregasTemplates = (function () {
 
     const modalEntrega = (e) => {  
         return `<div class="modal fade" id="modal_entrega" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
