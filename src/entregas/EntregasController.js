@@ -28,7 +28,7 @@ const EntregasController = (() => {
             getEntrega: id
         };
 
-        let url = "application/controller/EntregasController";
+        let url = "application/controller/entregasController";
 
         RequestController.request(url, params).then((res) => {
             $('#modal_entrega').remove();
