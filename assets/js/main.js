@@ -53,3 +53,8 @@ const main = (function () {
 
 })();
 
+$(document).ready(() => { 
+    Notiflix.Notify.init({
+        timeout: 2000,    
+    });
+})

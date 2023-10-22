@@ -1,6 +1,7 @@
 const LoaderController = (() => {
    
-    const loader = ()=>{      
+    const loader = ()=>{  
+           
         Notiflix.Loading.circle();
             
         setTimeout(() => {
@@ -15,11 +16,15 @@ const LoaderController = (() => {
             Notiflix.Loading.remove();            
         }, 300);
     }
+    setTimeout(() => {
+        $("a[title='Hosted on free web hosting 000webhost.com. Host your own website for FREE.']").css('display', 'none');     
+    }, 1500);
+
+   
     
     return {
         loader,
         show,
         hide
     }
-
 })();

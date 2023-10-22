@@ -53,7 +53,6 @@ const EntregasController = (() => {
 
     }
 
-    // init();
     return {
         getListEntregas,
         getEntrega
