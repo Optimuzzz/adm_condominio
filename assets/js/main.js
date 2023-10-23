@@ -51,10 +51,17 @@ const main = (function () {
         callFunc(e);
     });
 
+    setTimeout(() => {
+        $("a[title='Hosted on free web hosting 000webhost.com. Host your own website for FREE.']").css('display', 'none');
+    }, 1500);
+
 })();
 
-$(document).ready(() => { 
+$(document).ready(async () => {
+
     Notiflix.Notify.init({
-        timeout: 2000,    
+        timeout: 2000,
     });
+    
+    
 })

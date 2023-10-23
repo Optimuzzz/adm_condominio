@@ -14,6 +14,7 @@ const RequestController = (() => {
         })
         .fail(function (e) {
             console.error(e);
+            location.replace("index");
         });        
 
         return res;

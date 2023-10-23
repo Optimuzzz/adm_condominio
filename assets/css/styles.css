@@ -169,6 +169,10 @@ img {
   transition: .3s;
 }
 
+.error{
+  color:red;
+}
+
 /* Minimalist design, active link */
 /* .active-link::before{
   content: '';
@@ -213,7 +217,7 @@ img {
     height: calc(var(--header-height) + 1.5rem); /* 4.5rem */
   }
   .nav__img {
-    display: none;
+    /* display: none; */
   }
   .nav__icon {
     display: none;

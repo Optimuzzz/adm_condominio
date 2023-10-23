@@ -11,7 +11,7 @@ const EntregasController = (() => {
         RequestController.request(url, params).then((res) => {
 
             let li = '';
-            res.map((e) => {
+            res.data.map((e) => {
                 li += `<li class="list-group-item list-group-item-action" id="${e.id}" onclick="EntregasController.getEntrega(${e.id})" > bloco - ${e.bloco} | apt - ${e.apt}</li>`;
             });
 
@@ -32,7 +32,7 @@ const EntregasController = (() => {
 
         RequestController.request(url, params).then((res) => {
             $('#modal_entrega').remove();
-            $('body').append(EntregasTemplates.modalEntrega(res[0]));
+            $('body').append(EntregasTemplates.modalEntrega(res.data[0]));
             $('#modal_entrega').modal('show');
 
             let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)

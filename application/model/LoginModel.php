@@ -6,10 +6,17 @@ class LoginModel extends DbConfig
     public function login($login, $senha)
     {
         $params = [$login, $senha];
-        $sql ="SELECT * FROM login WHERE user = ? AND password = ? ";
+        
+        $sql ="SELECT  
+                `id`, `user`,  `address`, `city`, `state`, `zip` 
+               FROM login 
+               WHERE user = ? 
+               AND password = ? ";
+
         $result = $this->execQuery($sql, $params);
-        if($result->rowCount() > 0){
-            return true;
+
+        if($result->rowCount() > 0){  
+            return $result->fetch(PDO::FETCH_ASSOC); 
         } 
         
         return false;

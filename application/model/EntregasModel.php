@@ -1,7 +1,7 @@
 <?php
 require_once '../db_config/db_config.php';
 
-class HomeModel extends DbConfig
+class EntregasModel extends DbConfig
 {
     public function getListEntregas()
     {
