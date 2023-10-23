@@ -28,7 +28,7 @@ class PerfilModel extends DbConfig
             $dados['city'],
             $dados['state'],
             $dados['zip'],
-            $dados['id'],
+            ID_USER,
         ];
 
         $sql = " UPDATE login  

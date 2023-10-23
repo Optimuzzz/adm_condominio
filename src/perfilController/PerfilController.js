@@ -137,7 +137,6 @@ const PerfilController = (() => {
                                     <input type="text" class="form-control" id="zip" name="zip" value="${e.zip}">
                                 </div>
                                
-                                <input type="hidden"  id="id" name="id" value="${e.id}">
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary" onclick="PerfilController.updatePerfil()">Atualizar</button>
                                 </div>
