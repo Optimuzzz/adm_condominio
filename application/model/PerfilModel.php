@@ -1,16 +1,17 @@
 <?php
 require_once '../db_config/db_config.php';
+require_once '../constants/constants.php';
 
 class PerfilModel extends DbConfig
 {
-    public function getDadosUser($id)
+    public function getDadosUser()
     {
         $sql = "SELECT  
                `id`, `user`,  `telephone`,  `address`, `city`, `state`, `zip` 
                FROM login 
                WHERE id = ?  ";
 
-        $result = $this->execQuery($sql, [$id]);
+        $result = $this->execQuery($sql, [ID_USER]);
 
         if ($result->rowCount() > 0) {
             return $result->fetch(PDO::FETCH_ASSOC);

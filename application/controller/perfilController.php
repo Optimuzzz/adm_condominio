@@ -1,6 +1,5 @@
 <?php
 
-require_once '../constants/constants.php';
 require_once '../model/PerfilModel.php';
 
 $model = new PerfilModel;
