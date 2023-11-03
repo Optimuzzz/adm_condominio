@@ -8,9 +8,9 @@ class LoginModel extends DbConfig
         $params = [$login, $senha];
         
         $sql ="SELECT  
-                `id`, `user`,  `address`, `city`, `state`, `zip` 
-               FROM login 
-               WHERE user = ? 
+                `id`, `name`
+               FROM user 
+               WHERE name = ? 
                AND password = ? ";
 
         $result = $this->execQuery($sql, $params);

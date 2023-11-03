@@ -14,7 +14,7 @@ $senha = $_REQUEST['senha'] ?? '';
 $rs = $model->login($login, $senha);
 if ($rs) {
 
-    $_SESSION['user'] = $rs['user'];
+    $_SESSION['name'] = $rs['name'];
     $_SESSION['id_user'] = $rs['id'];
 
     echo json_encode(["status" => 200], JSON_INVALID_UTF8_IGNORE);

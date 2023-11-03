@@ -6,10 +6,10 @@ class PerfilModel extends DbConfig
 {
     public function getDadosUser()
     {
-        $sql = "SELECT  
-               `id`, `user`,  `telephone`,  `address`, `city`, `state`, `zip` 
-               FROM login 
-               WHERE id = ?  ";
+        $sql = "SELECT u.id, u.name, u.id_address, a.logradouro, a.numero, a.bairro, a.cidade, a.estado, a.cep, a.complemento, u.telefone_1, u.telefone_2
+                FROM user u
+                LEFT JOIN address a ON a.id = u.id_address
+                WHERE u.id = ?  ";
 
         $result = $this->execQuery($sql, [ID_USER]);
 
@@ -23,17 +23,29 @@ class PerfilModel extends DbConfig
     public function postDadosUser($dados)
     {
         $params = [
-            $dados['telephone'],
-            $dados['address'],
-            $dados['city'],
-            $dados['state'],
-            $dados['zip'],
+            $dados['telefone_1'],
+            $dados['telefone_2'],
+            $dados['logradouro'],
+            $dados['cidade'],
+            $dados['estado'],
+            $dados['cep'],
+            $dados['bairro'],
+            $dados['complemento'],            
             ID_USER,
         ];
 
-        $sql = " UPDATE login  
-                SET `telephone` = ? ,`address` = ? , `city` = ? , `state` = ?, `zip` = ? 
-                WHERE id = ?  ";
+        $sql = " UPDATE address a 
+                 INNER JOIN
+                 user u ON a.id = u.id
+                 SET    `telefone_1` = ?,
+                        `telefone_2` = ?, 
+                        `logradouro` = ? ,
+                        `cidade` = ? , 
+                        `estado` = ?,
+                        `cep` = ? , 
+                        `bairro` = ? ,
+                        `complemento` = ?                
+                 WHERE a.id = ?  ";
 
         $result = $this->execQuery($sql, $params, true);
 
